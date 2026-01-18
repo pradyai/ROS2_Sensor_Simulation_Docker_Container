@@ -1,12 +1,10 @@
-# ROS 2 Kortex – RSS Project
 ### *Simulation-Only Environment for Controlling a Virtual Kinova Gen3 Arm Using Sensor Data*
 
 ---
 
 ## 🎯 Purpose of This Workspace
 This repository provides a **Dockerized ROS 2 environment** for working with the Kinova Gen3 robotic arm **entirely in simulation**.  
-It is tailored for the **RSS Project**, where students must:
-
+It is tailored to:
 - Read sensor data from microcontrollers (e.g., ESP8266/MPU6050)  
 - Send this data to ROS 2 over Wi-Fi  
 - Map sensor values to robot motions  
@@ -25,29 +23,7 @@ This workspace includes:
 
 ## 📦 Installation Instructions
 
-### 1. Clone the Repository
-
-Each project group has its own repository named:
-
-**RSS_WS26_Project_Group_<GROUP_NUMBER>**
-
-To clone your group’s repository, use the following command (replacing <GROUP_NUMBER> with the number of your group):
-
-```bash
-git clone --recurse-submodules https://git-ce.rwth-aachen.de/wzl-mq-ms/forschung-lehre/robotic-sensor-systems/rss_ws26_project_group_<GROUP_NUMBER>.git
-
-cd rss_ws26_project_group_<GROUP_NUMBER>
-```
-
-If you forgot `--recurse-submodules`:
-
-```bash
-git submodule update --init --recursive
-```
-
----
-
-### 2. Build the Docker Image
+### 1. Build the Docker Image
 
 Run from the root folder:
 
@@ -63,7 +39,7 @@ ros2-kortex:latest
 
 ---
 
-### 3. Run the Docker Container
+### 2. Run the Docker Container
 
 ```bash
 cd docker_run
@@ -209,7 +185,7 @@ export ROS_DOMAIN_ID=5
 
 ---
 
-# 🌐 Optional: Gazebo/Ignition Simulation
+# 🌐 Gazebo/Ignition Simulation
 
 Advanced students may explore 3D physics simulation.
 
@@ -220,8 +196,6 @@ ros2 launch kortex_description gen3_ignition.launch.py
 ```
 
 Or include URDF manually in custom Gazebo worlds.
-
-This is not required for the RSS Project but is available for exploration.
 
 ---
 
